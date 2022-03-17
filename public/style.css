@@ -1,0 +1,78 @@
+h1{
+    font-family: 'Yellowtail', cursive;
+
+}
+
+.slider{
+    max-height: 35rem;
+    overflow: hidden;
+    
+}
+
+.image{
+}
+
+.logo-img{
+    height: 4rem;
+    margin-left: 1rem;
+    color: aliceblue;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    opacity: 1;
+    border: white solid 1px;
+    background-color: transparent;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: white;
+}
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn{
+    position: fixed;
+    right: 4rem;
+    bottom: 8rem;
+    z-index: 3;
+    font-size: 20px;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+}
+.main{
+ 
+}
+
