@@ -32,9 +32,9 @@ const Formulario = () => {
                 errores.direccion = 'Por favor ingresa una dirección'
             } 
 
-            if(!valores.consulta){
+           if(!valores.consulta){
                 errores.consulta = 'Por favor ingresa su consulta'
-            } 
+            }
 
             return errores
         }}
@@ -45,10 +45,10 @@ const Formulario = () => {
         }}
         >
             {({errors})=>(
-                <Form classname=''>
-                <div>
-                    <label htmlFor="nombre">Nombre</label>
-                    <Field
+                <Form className='container flex flex-col flex-wrap mx-4 my-2'>
+                <div className='flex flex-col mx-4 '>
+                    <label className='bg-yellow-300 text-center rounded-lg mb-2 shadow-md shadow-yellow-500' htmlFor="nombre">Nombre</label>
+                    <Field className='bg-white rounded-md border-b-2 border-yellow-800 m-1 p-1'
                         type="text" 
                         id="nombre" 
                         name="nombre" 
@@ -57,30 +57,30 @@ const Formulario = () => {
                     <ErrorMessage 
                         name="nombre" 
                         component={() => (
-                            <div className="error">{errors.nombre}</div>)
+                            <div className="text-red-500 mt-2">{errors.nombre}</div>)
                     }/>
                 </div>
 
-                <div>
-                <label htmlFor="telefono">Telefono</label>
-                    <Field
+                <div className='flex flex-col mx-4 '>
+                <label className='bg-yellow-300 text-center rounded-lg mb-2 shadow-md shadow-yellow-500' htmlFor="telefono">Telefono</label>
+                    <Field className='bg-white rounded-md border-b-2 border-yellow-800 m-1 p-1'
                         type="tel" 
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        pattern="[0-9]{4}[0-9]{6}"
                         id="telefono" 
                         name="telefono" 
-                        placeholder="Ingrese su numero de telfono"
+                        placeholder="Ingrese su numero de telefono"
                     />
                         <ErrorMessage 
                             name="telefono" 
                             component={() => (
-                            <div className="error">{errors.telefono}</div>)
+                            <div className="text-red-500">{errors.telefono}</div>)
                     }/>
                 </div>
 
-                <div>
-                 <label htmlFor="direccion">Dirección</label>
-                    <Field
-                        type="text" 
+                <div className='flex flex-col mx-4 '>
+                 <label className='bg-yellow-300 text-center rounded-lg mb-2 shadow-md shadow-yellow-500' htmlFor="direccion">Dirección</label>
+                    <Field className='bg-white rounded-md border-b-2 border-yellow-800 m-1 p-1'
+                        type="adress" 
                         id="direccion" 
                         name="direccion" 
                         placeholder="ingrese su direccion"
@@ -88,26 +88,27 @@ const Formulario = () => {
                         <ErrorMessage 
                             name="direccion" 
                             component={() => (
-                                <div className="error">{errors.direccion}</div>)
+                                <div className="text-red-500">{errors.direccion}</div>)
                     }/>
                 </div>
 
-                <div> 
-                <label htmlFor="Consulta">Consulta</label>
-                    <Field
-                        type="textarea" 
-                        id="Consulta" 
-                        name="Consulta" 
+                <div className='flex flex-col mx-4 '> 
+                <label className='bg-yellow-300 text-center rounded-lg mb-2 shadow-md shadow-yellow-500' htmlFor="Consulta">Consulta</label>
+                    <Field className='bg-white rounded-md border-b-2 border-yellow-800 m-1 p-1 h-20 text-start break-words'
+                        as="textarea" 
+                        id="consulta" 
+                        name="consulta" 
                         placeholder="ingrese su Consulta"
                     />
                     <ErrorMessage 
                         name="consulta" 
                         component={() => (
-                            <div className="error">{errors.consulta}</div>)
+                            <div className="text-red-500">{errors.consulta}</div>)
                     }/>
                 </div>
-                <button type="submit">Enviar</button>
-				    {formEnv && <p className="exito">Formulario enviado con exito!</p>}
+                <button className='self-center p-1 ml-3 w-24 h-10 bg-yellow-300  shadow-md shadow-yellow-300 rounded border-2 border-yellow-800 pointer-events-auto hover:border-yellow-600 text-white hover:bg-yellow-400 hover:text-black cursor-pointer' type="submit">Enviar
+				    {formEnv && <p className="text-green-500">Formulario enviado con éxito!</p>}
+                </button>
                 </Form>
             )}
             
